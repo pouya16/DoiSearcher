@@ -1,24 +1,19 @@
 package com.example.doisearcher
 
-import android.opengl.Visibility
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.databinding.adapters.LinearLayoutBindingAdapter
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.doisearcher.adapters.SearchConsAdapter
-import com.example.doisearcher.adapters.SearchConsClickListener
 import com.example.doisearcher.databinding.FragmentFirstBinding
 import com.example.doisearcher.datamodels.Item
 import com.example.doisearcher.viewModels.ConsApiStatus
 import com.example.doisearcher.viewModels.SharedViewModel
-import kotlin.reflect.jvm.internal.impl.renderer.ClassifierNamePolicy.SHORT
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
