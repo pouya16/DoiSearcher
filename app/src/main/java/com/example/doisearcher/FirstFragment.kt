@@ -1,5 +1,6 @@
 package com.example.doisearcher
 
+import android.opengl.Visibility
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -78,11 +79,13 @@ class FirstFragment : Fragment() {
         binding.progress.visibility = View.GONE
         binding.txtError.visibility = View.GONE
         binding.btnSearch.isActivated = true
+        binding.recycler.visibility = View.GONE
         when(value){
             ConsApiStatus.ERROR -> {
                 Toast.makeText(requireContext(),"error retrieving data", Toast.LENGTH_SHORT)
             }
             ConsApiStatus.DONE ->{
+                binding.recycler.visibility = View.VISIBLE
             }
             ConsApiStatus.NO_DATA ->{
                 binding.txtError.visibility = View.VISIBLE
